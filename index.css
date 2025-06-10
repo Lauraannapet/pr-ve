@@ -12,13 +12,111 @@ img {
 }
 
 /*************** fonts ******************/
-@font-face {
-  font-family: "Open Sans";
-  src: url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/** indhold **/
+.baggrund {
+  background-image: url("forside_imgs/background.webp"); /* skriv dit billede her */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 125px 20px; /* så der kommer luft omkring h1 og p */
+  text-align: center;
+}
+
+.intro h1 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 20px 0;
+  margin-top: 110px;
+  font-size: 3rem;
+}
+
+.intro p {
+  font-family: "Libre Baskerville", serif;
+  color: #ffffff;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 523px;
+  margin-top: 60px;
+}
+.temaer-titel h2 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  color: #cc99a8;
+  text-align: center;
+  margin-top: 60px;
+}
+h2::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 30%; /* her styrer du hvor meget længere end teksten */
+  background-color: #c58ca4;
+  margin: 10px auto 0 auto; /* centrerer stregen */
+}
+
+/** grid bokse **/
+
+.tema-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 55px 60px 60px;
+}
+
+.tema-boks {
+  background-color: #a5c3b0;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+
+  /* gør hele boksen klikbar */
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.tema-grid a {
+  font-family: "Libre Baskerville", serif;
+  color: #ffffff;
+}
+.tema-boks:hover {
+  background-color: #cc99a8;
+  transform: scale(1.05);
+}
+
 /*************** Menu ****************/
 
 header {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,17 +124,11 @@ header {
   background-color: #ffffff;
 }
 
-header .logo a {
-  color: #011707;
-  font-size: 2rem;
-  text-decoration: none;
-  transition: color 0.3s;
+.logo img {
+  width: 60px;
+  height: 60px;
 }
-header .logo a:hover {
-  color: #0a4b1990;
-}
-
-nav {
+.nav-menu {
   display: flex;
   align-items: center;
 }
@@ -59,14 +151,14 @@ nav {
 .menu a {
   display: block;
   padding: 10px;
-  color: #011707;
+  color: #591730;
   text-decoration: none;
   transition: color 0.3s;
   text-align: end;
 }
 
 .menu a:hover {
-  color: #0a4b1990;
+  color: #591730;
 }
 
 @media (max-width: 800px) {
@@ -94,11 +186,11 @@ header {
 }
 
 .logo img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 }
 
-nav {
+.nav-menu {
   display: flex;
   align-items: center;
 }
@@ -121,14 +213,14 @@ nav {
 .menu a {
   display: block;
   padding: 10px;
-  color: #333333;
+  color: #591730;
   text-decoration: none;
   transition: color 0.3s;
   text-align: end;
 }
 
 .menu a:hover {
-  color: #8e2e2e;
+  color: #591730;
 }
 
 .burger {
